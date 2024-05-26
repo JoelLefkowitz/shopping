@@ -1,18 +1,7 @@
-from typing import List
-
 import pytest
-
-from pricer import Offer, PriceStub
-
-
-@pytest.fixture()
-def buy_one_apple_get_one_free() -> Offer:
-    return Offer("Buy one apple get one free", buy_one_apple_get_one_free_transform)
-
-
-@pytest.fixture()
-def half_price_oranges() -> Offer:
-    return Offer("Half price oranges", half_price_oranges_transform)
+from src.pricer.offer import Offer
+from src.pricer.pricer import PriceStub
+from typing import List
 
 
 def buy_one_apple_get_one_free_transform(
@@ -30,3 +19,13 @@ def half_price_oranges_transform(stubs_list: List[PriceStub]) -> List[PriceStub]
         PriceStub(i.name, i.price / 2 if i.name == "orange" else i.price)
         for i in stubs_list
     ]
+
+
+@pytest.fixture()
+def buy_one_apple_get_one_free() -> Offer:
+    return Offer("Buy one apple get one free", buy_one_apple_get_one_free_transform)
+
+
+@pytest.fixture()
+def half_price_oranges() -> Offer:
+    return Offer("Half price oranges", half_price_oranges_transform)

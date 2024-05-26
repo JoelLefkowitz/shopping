@@ -1,12 +1,12 @@
-from typing import List
-
 import pytest
-from fixtures.offers import buy_one_apple_get_one_free, half_price_oranges
+from ..fixtures import buy_one_apple_get_one_free, half_price_oranges
 from pytest_bdd import given, scenario, then, when
-
-from basket import Basket
-from catalogue import Catalogue, UnknownPrice
-from pricer import Offer, Pricer, PriceStub
+from src.basket.basket import Basket
+from src.catalogue.catalogue import Catalogue
+from src.catalogue.exceptions import UnknownPrice
+from src.pricer.offer import Offer
+from src.pricer.pricer import Pricer, PriceStub
+from typing import List
 
 
 @scenario(

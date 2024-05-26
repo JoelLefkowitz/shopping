@@ -1,10 +1,8 @@
-from dataclasses import dataclass
-from typing import Any, Dict, ItemsView, Iterator, Optional
-
-from utils.types import dict_matches_type
-
+from ..utils.types import dict_matches_type
 from .exceptions import (BasketQuantityError, BasketTypeError,
                          ProductNotInBasket)
+from dataclasses import dataclass
+from typing import Any, Dict, ItemsView, Iterator, Optional
 
 
 @dataclass
@@ -17,7 +15,7 @@ class Basket:
 
         Args:
             contents (Optional[Dict[str, int]], optional): Dictionary representing
-            procducts and their quantities in the basket. Defaults to None.
+            products and their quantities in the basket. Defaults to None.
 
         Raises:
             BasketTypeError: Basket contents must be a dictionary of strings to integers.

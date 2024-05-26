@@ -1,9 +1,7 @@
+from ..utils.types import dict_matches_type
+from .exceptions import CataloguePriceError, CatalogueTypeError, UnknownPrice
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional
-
-from utils.types import dict_matches_type
-
-from .exceptions import CataloguePriceError, CatalogueTypeError, UnknownPrice
 
 
 @dataclass
@@ -16,7 +14,7 @@ class Catalogue:
 
         Args:
             products (Optional[Dict[str, float]], optional): Dictionary representing
-            procducts and their prices. Defaults to None.
+            products and their prices. Defaults to None.
 
         Raises:
             CatalogueTypeError: Catalogue products must be a dictionary of strings to floats.

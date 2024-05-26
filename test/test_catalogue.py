@@ -1,9 +1,8 @@
-from typing import Any, Dict
-
 import pytest
-
-from catalogue import (Catalogue, CataloguePriceError, CatalogueTypeError,
-                       UnknownPrice)
+from src.catalogue.catalogue import Catalogue
+from src.catalogue.exceptions import (CataloguePriceError, CatalogueTypeError,
+                                      UnknownPrice)
+from typing import Any, Dict
 
 
 def test_create() -> None:
@@ -19,7 +18,7 @@ def test_create() -> None:
     "products",
     [{"a": "1.0"}, {1: "a"}, {"a": 1}],
 )
-def test_catalogie_type_error(products: Any) -> None:
+def test_catalogue_type_error(products: Any) -> None:
     """
     Test that initializing a Catalogue with products that
     have an invalid type raises a CatalogueTypeError.
@@ -38,7 +37,7 @@ def test_catalogie_type_error(products: Any) -> None:
         {"a": -1.0},
     ],
 )
-def test_catalogie_price_error(products: Dict[str, float]) -> None:
+def test_catalogue_price_error(products: Dict[str, float]) -> None:
     """
     Test that initializing a Catalogue with products that
     have an invalid price raises a CataloguePriceError.

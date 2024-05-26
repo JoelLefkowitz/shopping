@@ -1,6 +1,22 @@
-# Shopping basket
+# Shopping
 
 Shopping basket pricing library for a supermarket.
+
+![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/shopping/review.yml)
+![Version](https://img.shields.io/pypi/v/shopping)
+![Downloads](https://img.shields.io/pypi/dw/shopping)
+![Quality](https://img.shields.io/codacy/grade/b76ffbb49ba941aaacf8e723292934ef)
+![Coverage](https://img.shields.io/codacy/coverage/b76ffbb49ba941aaacf8e723292934ef)
+
+## Installation
+
+```bash
+pip install shopping
+```
+
+## Documentation
+
+Documentation and more detailed examples are hosted on [Github Pages](https://joellefkowitz.github.io/shopping).
 
 ## Design
 
@@ -61,44 +77,6 @@ class Offer:
     transform: Transform[List[PriceStub]]
 ```
 
-## Installing
-
-Black is used to format this repository. Since its packages are still pre-releases we must use pipenv's --pre flag to install dependencies.
-
-```bash
-pipenv install --pre
-```
-
-For the convenience of grouping tooling jobs grunt is used as a task runner.
-
-```bash
-npm i
-```
-
-## Tooling
-
-To run all unit and bdd tests:
-
-```bash
-grunt test
-```
-
-To run linters:
-
-```bash
-grunt lint
-```
-
-To run formatters:
-
-```bash
-grunt format
-```
-
-## Docs
-
-Google style docstrings are used to document this repository. Full documentation can be generated with sphinx-autodoc and sphinx-apidoc.
-
 ## Tests
 
 Unit tests are not enough to capture the desired behavior of the pricer in a readable way. Therefore we include some bdd tests. Scenarios are documented in feature files:
@@ -120,15 +98,73 @@ Feature: Pricer
         | sub_total | 3.0 | 5.0 | 7.0 | 4.0 | 6.0 | 8.0 | 5.0 | 7.0 | 9.0 |
         | discount  | 1.0 | 2.0 | 3.0 | 2.0 | 3.0 | 4.0 | 2.0 | 4.0 | 4.0 |
         | total     | 2.0 | 3.0 | 4.0 | 2.0 | 3.0 | 4.0 | 3.0 | 4.0 | 5.0 |
-
 ```
+
+## Tooling
+
+### Dependencies
+
+To install dependencies:
+
+```bash
+yarn install
+pip install .[all]
+```
+
+### Tests
+
+To run tests:
+
+```bash
+thx test
+```
+
+### Documentation
+
+To generate the documentation locally:
+
+```bash
+thx docs
+```
+
+### Linters
+
+To run linters:
+
+```bash
+thx lint
+```
+
+### Formatters
+
+To run formatters:
+
+```bash
+thx format
+```
+
+## Contributing
+
+Please read this repository's [Code of Conduct](CODE_OF_CONDUCT.md) which outlines our collaboration standards and the [Changelog](CHANGELOG.md) for details on breaking changes that have been made.
+
+This repository adheres to semantic versioning standards. For more information on semantic versioning visit [SemVer](https://semver.org).
+
+Bump2version is used to version and tag changes. For example:
+
+```bash
+bump2version patch
+```
+
+### Contributors
+
+- [Joel Lefkowitz](https://github.com/joellefkowitz) - Initial work
 
 ## Remarks
 
 Lots of love to the open source community!
 
-![Be kind][be_kind]
-
-<!-- Links -->
-
-[be_kind]: https://media.giphy.com/media/osAcIGTSyeovPq6Xph/giphy.gif
+<div align='center'>
+    <img width=200 height=200 src='https://media.giphy.com/media/osAcIGTSyeovPq6Xph/giphy.gif' alt='Be kind to your mind' />
+    <img width=200 height=200 src='https://media.giphy.com/media/KEAAbQ5clGWJwuJuZB/giphy.gif' alt='Love each other' />
+    <img width=200 height=200 src='https://media.giphy.com/media/WRWykrFkxJA6JJuTvc/giphy.gif' alt="It's ok to have a bad day" />
+</div>

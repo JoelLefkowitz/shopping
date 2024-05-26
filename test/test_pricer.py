@@ -1,10 +1,10 @@
-# pylint: disable=E0401,W0611,W0621,R0913
 import pytest
-from fixtures.offers import buy_one_apple_get_one_free, half_price_oranges
-
-from basket import Basket
-from catalogue import Catalogue, UnknownPrice
-from pricer import Offer, Pricer, PriceStub
+from .fixtures import buy_one_apple_get_one_free, half_price_oranges
+from src.basket.basket import Basket
+from src.catalogue.catalogue import Catalogue
+from src.catalogue.exceptions import UnknownPrice
+from src.pricer.offer import Offer
+from src.pricer.pricer import Pricer, PriceStub
 
 
 def test_create(half_price_oranges: Offer) -> None:

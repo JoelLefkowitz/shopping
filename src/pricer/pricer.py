@@ -1,12 +1,11 @@
+from ..basket.basket import Basket
+from ..catalogue.catalogue import Catalogue
+from ..catalogue.exceptions import UnknownPrice
+from .offer import Offer
+from .stubs import PriceStub
 from dataclasses import dataclass
 from functools import reduce
 from typing import List, Optional
-
-from basket import Basket
-from catalogue import Catalogue, UnknownPrice
-
-from .offer import Offer
-from .stubs import PriceStub
 
 
 @dataclass
@@ -91,12 +90,10 @@ class Pricer:
         # the control over the stub list's state.
         # We must use max(stub.price, 0) to drop negative price values to zero.
         return sum(
-            [
-                max(stub.price, 0)
-                for stub in reduce(
-                    lambda stubs_list, offer: offer.transform(stubs_list),  # type: ignore
-                    self.offers,
-                    self.stubs_list,
-                )
-            ]
+            max(stub.price, 0)
+            for stub in reduce(
+                lambda stubs_list, offer: offer.transform(stubs_list),  # type: ignore
+                self.offers,
+                self.stubs_list,
+            )
         )

@@ -1,9 +1,6 @@
-# pylint: disable=C0103
-
+from .stubs import PriceStub
 from dataclasses import dataclass
 from typing import Callable, List, TypeVar
-
-from .stubs import PriceStub
 
 T = TypeVar("T")
 Transform = Callable[[T], T]

@@ -1,9 +1,8 @@
-from typing import Any, Dict
-
 import pytest
-
-from basket import (Basket, BasketQuantityError, BasketTypeError,
-                    ProductNotInBasket)
+from src.basket.basket import Basket
+from src.basket.exceptions import (BasketQuantityError, BasketTypeError,
+                                   ProductNotInBasket)
+from typing import Any, Dict
 
 
 def test_create() -> None:
