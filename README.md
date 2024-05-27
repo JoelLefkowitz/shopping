@@ -8,7 +8,7 @@ Shopping basket pricing library for a supermarket.
 ![Quality](https://img.shields.io/codacy/grade/b76ffbb49ba941aaacf8e723292934ef)
 ![Coverage](https://img.shields.io/codacy/coverage/b76ffbb49ba941aaacf8e723292934ef)
 
-## Installation
+## Installing
 
 ```bash
 pip install shopping
