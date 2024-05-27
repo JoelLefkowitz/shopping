@@ -54,8 +54,8 @@ file = "README.md"
 content-type = "text/markdown"
 
 [project.urls]
-repository = "https://github.com/JoelLefkowitz/"
-homepage = "https://joellefkowitz.github.io/"
+repository = "https://github.com/JoelLefkowitz/shopping"
+homepage = "https://joellefkowitz.github.io/shopping"
 
 [[project.authors]]
 name = "Joel Lefkowitz"
