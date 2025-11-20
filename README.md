@@ -2,7 +2,7 @@
 
 Shopping basket pricing library for a supermarket.
 
-![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/shopping/review.yml)
+![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/shopping/review.yaml)
 ![Version](https://img.shields.io/pypi/v/shopping)
 ![Downloads](https://img.shields.io/pypi/dw/shopping)
 ![Quality](https://img.shields.io/codacy/grade/b76ffbb49ba941aaacf8e723292934ef)
